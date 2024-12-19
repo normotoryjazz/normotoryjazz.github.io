@@ -1,6 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    test
-  </head>
+<head>
+  <style type="text/css">
+    * {
+      box-sizing: border-box; /* Ensures all elements include borders and padding within their dimensions */
+    }
+
+    html, body {
+      height: 100%; /* Ensure the body spans the full height of the viewport */
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: black;
+      border: 20px solid #95ff00; /* Green border around the entire page */
+    }
+
+    .center {
+      font-size: 4em;
+      color: #95ff00;
+      margin: 0;
+      padding: 0;
+      text-align: center; /* Center text within the div */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .center h1 {
+      margin: 0; /* Remove default margin */
+    }
+
+    .center h5 {
+      margin: 0; /* Remove default margin */
+      font-size: 0.5em; /* Adjust to fit proportionally */
+      color: #95ff00; /* Match the color */
+    }
+  </style>
+</head>
+<body>
+  <div class="center">
+    <h1>Error: 404</h1>
+    <h5>We Could Not Find What You Seek.</h5>
+  </div>
+</body>
 </html>
