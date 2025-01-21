@@ -37,6 +37,7 @@ body {
 	line-height: 1.8;
 	font-weight: 400;
 	color: lighten($black,60%);
+	touch-action: none;
 	&.menu-show {
 		overflow: hidden;
 		position: fixed;
@@ -357,368 +358,168 @@ h1, h2, h3, h4, h5,
 }
 
 //OWL CAROUSEL
+/* Owl Carousel Basic Styles */
 .owl-carousel {
 	position: relative;
-	.owl-item {
-		opacity: .4;
-		&.active {
-			opacity: 1;
-		}
-	}
-	.owl-dots {
-		text-align: center;
-		.owl-dot {
-			width: 10px;
-			height: 10px;
-			margin: 5px;
-			border-radius: 50%;
-			background: lighten($black, 90%);
-			position: relative;
-			&:after{
-				position: absolute;
-				top: -2px;
-				left: -2px;
-				right: 0;
-				bottom: 0;
-				width: 14px;
-				height: 14px;
-				content: '';
-				border:1px solid rgba(255,255,255,.3);
-				@include border-radius(50%);
-			}	
-			&:hover, &:focus{
-				outline: none !important;
-			}
-			&.active {
-				background: lighten($black, 70%);
-			}
-		}
-	}
-	&.home-slider {
-		position: relative;
-		height: 750px;
-		z-index: 0;
-		.slider-item {
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center center;
-			height: 750px;
-			position: relative;
-			z-index: 0;
-			@include media-breakpoint-down(lg){
-				background-position: center center !important;
-			}
-			.overlay{
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				background: $black;
-				opacity: 0;
-			}
-			.slider-text {
-				height: 750px;
-				z-index: 0;
-				@include media-breakpoint-down(md){
-					text-align: center;
-				}
-				.one-third{
-					width: 60%;
-					position: relative;
-					// height: 650px;
-					z-index: -1;
-					.overlay{
-						position: absolute;
-						top: 0;
-						bottom: 0;
-						left: 0;
-						right: 0;
-						background: $black;
-						opacity: 0;
-					}
-					@include media-breakpoint-down(lg){
-						width: 85%;
-					}
-					@include media-breakpoint-down(md){
-						width: 100%;
-						z-index: 0;
-						.overlay{
-							opacity: .3;
-						}
-						&:after{
-							opacity: 0;
-						}
-					}
-				}
-				.one-forth{
-					width: 50%;
-					position: relative;
-					@include media-breakpoint-up(md){
-						position: absolute;
-						top: 0;
-						left: 0;
-						bottom: 0;
-						right: 0;
-						width: 1200px;
-						margin: 0 auto;
-					}
-					@include media-breakpoint-down(md){
-						width: 100%;
-						position: absolute;
-						top: 0;
-						left: 0;
-						right: 0;
-						bottom: 0;
-						z-index: 1;
-						padding: 1em;
-					}
-					.text{
-						width: 100%;
-						@include media-breakpoint-up(lg){
-							position: absolute;
-							top: 50%;
-							left: 0;
-							transform: translateY(-50%);
-							right: 0;
-							// width: 1200px;
-							max-width: 50%;
-							padding-left: 45px;
-							padding-right: 3em;
-						}
-					}
-				}
-				// .icon-video{
-				// 	position: absolute;
-				// 	top: 120px;
-				// 	right: 70px;
-				// 	content: '';
-				// 	width: 70px;
-				// 	height: 70px;
-				// 	background: $white;
-				// 	@include border-radius(50%);
-				// 	span{
-				// 		font-size: 20px;
-				// 		color: $black;
-				// 	}
-				// 	span.play{
-				// 	}
-				// }
-				.subheading{
-					color: $black;
-					font-weight: 600;
-					font-size: 14px;
-					letter-spacing: 3px;
-					text-transform: uppercase;
-					color: $primary;
-				}
-				.text{
-					position: relative;
-					z-index: 1;
-				}
-				h1 {
-					font-size: 60px;
-					color: $white;
-					line-height: 1.2;
-					font-weight: 800;
-					span{
-						font-weight: 800;
-						color: $primary;
-					}
-					@include media-breakpoint-down(md) {
-						color: $white;
-						font-size: 50px;
-					}
-					@include media-breakpoint-down(sm) {
-						font-size: 40px;
-						// color: $pri;
-					}
-				}
-				h2{
-					font-size: 30px;
-					font-weight: 400;
-					@include media-breakpoint-down(md){
-						color: $white;
-					}
-				}
-				p {
-					color: rgba(0,0,0,.8);
-					font-weight: 400;
-					@include media-breakpoint-down(md) {
-						color: rgba(255,255,255,.7);
-						font-size: 23px;
-					}
-				}
-				.btn-custom{
-					bordeR: 1px solid $primary;
-					padding: 5px 20px;
-					text-transform: uppercase;
-					font-size: 12px;
-					letter-spacing: 3px;
-				}
-			}
-		}
-		.owl-nav {
-			position: absolute;
-			bottom: 60px !important;
-			left: 0;
-			right: 0;
-			// max-width: 1200px;
-			margin: 0 auto;
-			@include media-breakpoint-down(md){
-				display: none;
-			}
-			.owl-prev,
-			.owl-next {
-				position: absolute;
-				width: 60px;
-				height: 60px;
-				// color: $primary !important;
-				background: $white !important;
-				@include transition(.7s);
-				span {
-					&:before {
-						font-size: 20px;
-						margin-top: 7px;
-						color: $black;
-					}
-				}
-				opacity: 1;
-			}
-			.owl-prev {
-				top: 0 !important;
-				right: 0 !important;
-				@include media-breakpoint-up(lg){
-					right: 61px !important;
-				}
-				&:hover, &:focus{
-					background: $black !important;
-					outline: none !important;
-					span {
-						&:before {
-							font-size: 20px;
-							margin-top: 7px;
-							color: $primary;
-						}
-					}
-				}
-			}
-			.owl-next {
-				top: 0 !important;
-				right: 0 !important;
-				@include media-breakpoint-up(lg){
-					right: 0 !important;
-				}
-				&:hover, &:focus{
-					background: $black !important;
-					outline: none !important;
-					span {
-						&:before {
-							font-size: 24px;
-							margin-top: 7px;
-							color: $primary;
-						}
-					}
-				}
-			}
-		}
-		.owl-dots {
-			position: absolute;
-			left: 0;
-			right: 0;
-			bottom: 40px;
-			width: 100%;
-			@include media-breakpoint-down(sm){
-				bottom: 5px;
-			}
-			.owl-dot {
-				width: 10px;
-				height: 10px;
-				margin: 5px;
-				border-radius: 50%;
-				background: rgba(255,255,255,.4);
-				&.active {
-					background: $white;
-				}
-			}
-		}
-	}
-} 
-
-
-.hero-wrap{
-	width: 100%;
-	height: 100%;
-	position: inherit;
-	background-size: cover;
-	background-repeat: no-repeat;
-	@include media-breakpoint-down(md){
-	}
-	.overlay{
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		content: '';
-		opacity: 0;
-		background: $black;
-	}
-}
-
-.slider-text{
-	h1 {
-		font-size: 48px;
-		color: $white;
-		line-height: 1.2;
-		font-weight: 400;
-		// text-transform: uppercase;
-		@include media-breakpoint-down(md) {
-			font-size: 40px;
-		}
-	}
-	p {
-		font-size: 20px;
-		line-height: 1.5;
-		font-weight: 300;
-		color: rgba(255,255,255,.8);
-		strong{
-			font-weight: 700;
-			a{
-				color: $black;
-			}
-		}
-	}
-	.breadcrumbs{
-		font-size: 12px;
-		margin-bottom: 20px;
-		z-index: 99;
-		font-weight: 400;
-		text-transform: uppercase;
-		letter-spacing: 2px;
-		font-weight: 600;
-		span{
-			color: rgba(255,255,255,.8);
-			i{
-				color: rgba(255,255,255,.8);
-			}
-			a{
-				color: rgba(255,255,255,.8);
-				&:hover, &:focus{
-					color: $primary;
-					i{
-						color: $primary;
-					}
-				}
-			}
-		}
-	}
-	.bread{
-		font-weight: 700;
-		color: $white;
-		font-size: 7vw;
-	}
-}
+	overflow: hidden; /* Ensure the content does not overflow */
+	display: flex;    /* Ensure items are arranged in a row */
+	-webkit-overflow-scrolling: touch;  /* Enable smooth scrolling on iOS */
+  }
+  
+  .owl-item {
+	opacity: .4;
+	pointer-events: auto;  /* Ensure that items are interactive */
+	transition: opacity 0.3s ease;   /* Smooth transition for opacity */
+  }
+  
+  .owl-item.active {
+	opacity: 1;
+  }
+  
+  /* Navigation Dots */
+  .owl-dots {
+	text-align: center;
+  }
+  
+  .owl-dot {
+	width: 10px;
+	height: 10px;
+	margin: 5px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, .4);
+	position: relative;
+  }
+  
+  .owl-dot:after {
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: 0;
+	bottom: 0;
+	width: 14px;
+	height: 14px;
+	content: '';
+	border: 1px solid rgba(255, 255, 255, .3);
+	border-radius: 50%;
+  }
+  
+  .owl-dot:hover,
+  .owl-dot:focus {
+	outline: none !important;
+  }
+  
+  .owl-dot.active {
+	background: #fff;
+  }
+  
+  /* Home Slider Styles */
+  .home-slider {
+	position: relative;
+	height: 750px;
+	z-index: 0;
+	overflow: visible; /* Ensure scrolling is possible */
+  }
+  
+  
+  .overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.5); /* Slightly transparent overlay */
+  }
+  
+  /* Slider Text */
+  .slider-text {
+	z-index: 1;
+	color: white;
+  }
+  
+  .text {
+	position: relative;
+	z-index: 2;
+  }
+  
+  h1 {
+	font-size: 60px;
+	color: white;
+	line-height: 1.2;
+	font-weight: 800;
+	text-transform: uppercase;
+  }
+  
+  h2 {
+	font-size: 30px;
+	font-weight: 400;
+  }
+  
+  .btn-custom {
+	border: 1px solid #fff;
+	padding: 5px 20px;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 3px;
+  }
+  
+  /* Owl Navigation Arrows */
+  .owl-nav {
+	position: absolute;
+	bottom: 60px !important;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	z-index: 999;
+  }
+  
+  .owl-prev,
+  .owl-next {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	z-index: 2;
+	cursor: pointer;
+  }
+  
+  .owl-prev span,
+  .owl-next span {
+	font-size: 30px;
+	color: #333;
+  }
+  
+  .owl-prev:hover,
+  .owl-next:hover {
+	background-color: #333;
+  }
+  
+  .owl-prev {
+	left: 15px;
+  }
+  
+  .owl-next {
+	right: 15px;
+  }
+  
+  /* Ensure scrolling on all parent containers */
+  .home-slider,
+  .owl-carousel,
+  .owl-stage,
+  .owl-item {
+	overflow: visible !important; /* Ensure nothing blocks touch events */
+	touch-action: manipulation;  /* Allow touch manipulation */
+  }
+  
+  /* Prevent issues on mobile browsers (especially iOS Safari) */
+  body, html {
+	overflow-x: hidden; /* Prevent horizontal scrolling issues */
+	touch-action: manipulation; /* Avoid conflicts with other touch events */
+  }
+  
 
 
 .bg-light {
