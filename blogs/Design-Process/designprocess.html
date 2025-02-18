@@ -24,20 +24,250 @@
         color: white;
         font-size: 10pt;
     }
+    a {
+        color: white;
+    }
     .center {
         text-align: center;
     }
+    /* Style the button that is used to open and close the collapsible content */
+    .collapsible {
+    background-color: #000000;
+    color: #ccc;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: solid;
+    outline-color: white;
+    font-size: 20px;
+    font-weight: bold;
+    }
+
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active, .collapsible:hover {
+    background-color: #2d2d2d;
+    }
+
+    /* Style the collapsible content. Note: hidden by default */
+    .content {
+    padding: 0 18px;
+    background-color: rgb(0, 0, 0);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border: solid;
+    border-color: white;
+    }
 </style>
 <html>
-<h1 class="center">Design Process of Escape Rooms</h1>
-    <h4>
-        The design process of an escape room is one of the most important topics when making an escape room.
-        It's what will make or break your escape room and the flow of it. Understanding the design process and how it
-        will affect what makes a good room and a bad room is one of the many skills you must master before attempting to
-        make your first room. 
-        <br><br>
-        So, what is the design process? <br>
-        <img src="https://www.teachengineering.org/Images/edpHub/EDPHub_Graphic.png" alt="Design Process Visual" width="500" height="500">
-        <br>(<a href="https://www.teachengineering.org/populartopics/designprocess">Image Source</a>)
-    </h4>
+    <h1 class="center">Design Process of Escape Rooms</h1> 
+        <h4>
+            <p>
+                The design process of an escape room is one of the most  important topics
+                when it comes to making an escape room. It's what will make or  break your
+                escape room and the flow of it. Understanding the design process  will not
+                only save you time and money but will take your room design from  mediocre
+                to amazing and is one of the many skills you must master before  attempting
+                to make your first room. 
+                <br>
+                <br>So, what is the design process?
+            </p>
+            <img src="https://www.teachengineering.org/Images/edpHub/EDPHub_Graphic.png" alt="Design Process Visual" width="500" height="500">
+            <br>(<a href="https://www.teachengineering.org/populartopics/designprocess">Image Source</a>)
+            <p>
+                The design process is a  process that gives
+                a proper workflow to design anything from problem to  solution. There are
+                many different design process workflows but today I’ll be  going over the
+                one that works best for me. This process may not be the best for  you, some
+                people may want more or less steps, and that’s okay. But having a  process
+                in the long run will save you time, money, and brain power. The design
+                process I use has the following steps.
+            </p>
+            <p>
+                -           Ask
+            </p>
+            <p>
+                -           Research
+            </p>
+            <p>
+                -           Imagine
+            </p>
+            <p>
+                -           Plan
+            </p>
+            <p>
+                -           Create
+            </p>
+            <p>
+                -           Test
+            </p>
+            <p>
+                -           Improve
+            </p>
+            <p>
+                Each step moves closer to your end product. What does each  step mean
+                though? Let’s dive deeper into each step.
+            </p>
+                <button type="button" class="collapsible">Ask</button>
+                    <div class="content">
+                        <p>
+                            In the first step, ask,  we “Identify the need and constraints”.
+                            (<a href="https://www.teachengineering.org/populartopics/designprocess">Engineering 
+                            Design Process - TeachEngineering</a>) In escape room design this is
+                            whatever your  main objective is. You should never go into a room design
+                            with just a genre or  theme, you need to have an objective. Whether this is
+                            a story line, a  technological idea you want to have be your room’s
+                            centerpiece, or even as  simple as the room environment. You need to have an
+                            idea you can design around.  Also, if you are a designer working for a
+                            customer, this is where you need to  find out what the constraints on the
+                            project are. From financial, to  installation. What is the customers vision.
+                        </p>
+                </div>
+                <button type="button" class="collapsible">Research</button>
+                    <div class="content">
+                        <p>
+                            In the research step we research our project,  this is the phase
+                            you will spend most of your time on. This is where you  research your idea,
+                            this can be in a range of mood boards, reading literature,  watching videos,
+                            and in the case of design, researching if what you are doing  is possible,
+                            this step needs to be extremely thorough as not researching enough  can add
+                            delays in your project.
+                        </p>
+                    </div> 
+                <button type="button" class="collapsible">Imagine</button>
+                    <div class="content">
+                        <p>
+                            In this step, we generate ideas to solve our  solution. To do
+                            this, take your ideas you generated in the research step, and  delve deeply
+                            into them seeing if it’s possible to create what you see in your  head. This
+                            can be from finding out if you should use spray foam to make your  rock
+                            formations, or hand carve them. Whether using LED light strips is best for
+                            you, or DMX lights. Find out what approach you want to take, as none are
+                            universal, and each one has pros and cons.
+                        </p>
+                    </div>
+                <button type="button" class="collapsible">Plan</button>
+                    <div class="content">
+                            <p>
+                                Take all the research you have gathered from the last  two steps and
+                                ask yourself, which of these solutions is the best for
+                                <strong>
+                                    <em>MY PROJECT</em>
+                                </strong>
+                                . And I emphasize the importance of “My Project”. Many times, I  have had
+                                someone tell me that their solution is better. And it could be, but  when
+                                creating something do what is best for you. Whether it is cheaper, you’re
+                                more comfortable with said solution, or you want to learn something new.
+                                There  is no correct answer in escape room design as in the end its personal
+                                preference.  For example, in escape room automation, some companies have
+                                chosen to use PLCs  (Programmable Logic Controllers) as they know how to
+                                program them, even though  they can be pricey. Some companies choose to use
+                                a server rack (such as what I  use in my
+                                <em>
+                                    Nuclear Codes: Save The Nation
+                                </em>
+                                escape room box (raspberry pi  4)) since they are cheaper and there is more
+                                openly available knowledge about  them. And some companies might not
+                                automate anything and leave it to the game  guide running the room. All are
+                                great options, each with their own pros and  cons.
+                            </p>
+                    </div> 
+                <button type="button" class="collapsible">Create</button>
+                    <div class="content">
+                        <p>
+                            I like to call this phase the prototyping phase  instead of the
+                            create phase, as this is where you will make your first  prototype. Take
+                            every bit of information you got from the last steps and put it  into a
+                            functioning prototype. This can be from your puzzles, to set design, to
+                            your tech in the room. Everything needs to be prototyped.
+                            <strong>
+                                <em>DO NOT</em>
+                            </strong>
+                            waste  your time and money making a final product, as most of the time, the
+                            first  iteration will not be what you desire.
+                        </p>
+                    </div>
+                <button type="button" class="collapsible">Test</button>
+                    <div class="content">
+                        <p>
+                            Test what you have, when it comes to this phase this  will be the
+                            most important of them all when it comes to your game flow and  puzzle
+                            design. Get people to play test your games, evaluate their gameplay, and
+                            ask them questions. I will go more into this step in a later blog post, but
+                            I  like to do the following when playtesting.
+                        </p>
+                        <p>
+                            1.       Observe – Observe the behavior of your players,  how are they
+                            reacting to the environment around them. What are they doing you  weren’t
+                            expecting.
+                        </p>
+                        <p>
+                            2.       Notate – Take notes, always bring a pen and  paper or something
+                            equivalent to your play tests. Take notes of things the  players do wrong,
+                            what they do right, what you can improve on, and what needs  fixed.
+                        </p>
+                        <p>
+                            3.       Ask – When the players are done ask them  questions, what did they
+                            like, what did they dislike. At the end of the day,  your puzzle might be
+                            perfect, but if no one likes it then why should you use  it.
+                        </p>
+                    </div> 
+                <button type="button" class="collapsible">Improve</button>
+                    <div class="content">
+                        <p>
+                            Improve : This step will never be finished, you can get what  you want, but
+                            you will never finish any room. You will always think it needs  something
+                            new, or something needs to be done better. At the end of the day  nothing is
+                            perfect. But we can always do our best to improve our end product.  Take
+                            your tests, improve the room based on them, and repeat.
+                        </p>
+                    </div> 
+            <p>
+                Another thing is the design process is not linear. You will  go back and
+                forth between each step multiple times, and that’s not wrong at  all.
+                Another thing is that the design process takes time, don’t expect it to
+                happen overnight, it can take days, weeks, months, even years to get to your
+                final product. And even then, something will always need to be improved
+                upon.
+            </p>
+            <p>
+                If there is anything you take back from this, I want it to  be this. Have
+                fun when creating something, do stuff you are comfortable with,  and don’t
+                be afraid to try new things. We design rooms not because of the  financial
+                income they bring (though that is a plus), but we do this because we  enjoy
+                designing.
+            </p>
+            <p>
+                Work hard, stay creative, stay curious.
+            </p>
+        </h4>
 </html>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+</script>
+
+<!-- 
+<button type="button" class="collapsible">Demo</button>
+    <div class="content">
+        <p>
+            
+        </p>
+    </div> 
+-->
+                
