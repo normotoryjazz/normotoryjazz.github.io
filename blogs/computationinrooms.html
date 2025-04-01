@@ -1,0 +1,132 @@
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NW37P2LQWB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NW37P2LQWB');
+</script>
+
+<style>
+    body {
+        background-color: black;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    h1 {
+        color: white;
+        font-size: 50pt;
+    }
+    h2 {
+        color: white;
+        font-size: 40pt;
+    }
+    h3 {
+        color: white;
+        font-size: 30pt;
+    }
+    h4 {
+        color: white;
+        font-size: 20pt;
+    }
+    h5 {
+        color: white;
+        font-size: 10pt;
+    }
+    .center {
+        text-align: center;
+    }
+</style>
+<html>
+<h1 class="center">Technologically Complex Rooms</h1>
+    <p>
+        For those of you  who are just getting into escape room design. You can
+        sometimes look at the  market and go “where do I begin?” and that is what
+        this blog is for. Now, I won’t  be giving a step-by-step tutorial on how
+        each of these works. But I will be  giving the basic knowledge that
+        hopefully will help you decide on what you need  to research.
+    </p>
+    <p>
+        There are  multiple controller types so let’s break them down first.
+    </p>
+    <p>
+        Firstly, we have  micro controllers. These are chip sets that have a central
+        brain (such as the atmega328p)  that can run basic I/O operations. The most
+        basic one (and the one I started  with) is the Arduino Uno. The Arduino
+        controllers were originally made for  teaching in educational settings but
+        have slowly started to span all the way to  industrial technologies. These
+        controllers are quite simple. They read incoming  voltage signals (mainly
+        high and low inputs) with a couple of ports for analog data  (0 to 255). And
+        depending on what they have been programmed to do. Send out high,  low, or
+        analog signals based on the information provided. Arduinos can also  output
+        serial data to talk to other controllers. Arduinos also come in many  form
+        factors. Each with their own pros and cons. You have the Uno, the standard
+        size. The micro removes most of the complex features and going for a compact
+        form factor. As well as the mega with more I/O inputs and outputs. These
+        aren’t  all the form factors, but the major ones. Overtime however, as
+        projects become  more complex. Micro controllers just won’t cut it anymore.
+        From their low computational  power preventing real time readings. To the
+        inability to run complex data sets  such as audio and video. You will
+        eventually have to upgrade. And that is where  single board computers come
+        in. <br/>
+        <br/>
+        What is a single board  computer? A single board computer as the name
+        implies is a computer made from a  single “board” or PCB (printed circuit
+        board). These computers range in  complexity and price but the most common
+        of them all is the Raspberry Pi.  Raspberry Pi has been the go-to brand for
+        many. This is mainly due to how  opensource the pi is. Although the hardware
+        is not opensource, its software ecosystem  and operating system are. This
+        has allowed the community to extensively develop  its features. But enough
+        chat about how good the pi is (not sponsored). Why use  it over a micro
+        controller? Well for starters, single board computers usually  have multiple
+        things that micro controllers don’t. They have dedicated RAM, CPU,  and some
+        even have a dedicated graphics unit. This allows for complex data
+        operations. Another great thing about single board computers is the
+        compatibility with off-the-shelf products. With micro controllers, anytime
+        you  want to run something on them. You have to make it yourself. From LEDs
+        to running  a keyboard. It all must be DIY. With single board computers,
+        most of them run  off a basic Linux operating system. This means (almost)
+        anything that you use  on your day-to-day computer can run from your single
+        board computer. These are  great for running small servers in your escape
+        rooms, or a central control  device for less complex rooms. And this is
+        where most escape rooms stop. But we  can take this a step further with
+        centralized servers.
+    </p>
+    <p>
+        What is a  centralized server? A centralized server is used for heavy
+        computational power  that is beyond the power of any single board computer.
+        This can span from  running video game engines (such as unity) to control
+        your game. All the way to  audio servers. The main use case for hobbyists
+        however is show control. With single  board computers you can run
+        pre-rendered videos. These are your mp4 files and  such. But with servers
+        you can run videos that change based on your game state.  Imagine you have a
+        submarine room. In this room you want your players after  they solve a
+        puzzle to be able to “dive” into the sea. You would have your  dedicated
+        server running a live software renderer that will loop an “above sea”  video
+        until the players “dive” where it would then be able to render the “dive”
+        live in action. This usually is synchronized with lighting effects as well
+        through some sort of DMX control (will be discussed in a later blog). Show
+        control can really immerse your players, with its only downside being the
+        cost  and complexity.
+    </p>
+    <p>
+        And this is  where your hobbyist normally stops. There are some notable
+        controllers,  however, that I did not mention here that do need some
+        recognition. Those being  the PLCs (programmable logic controllers),
+        lighting controllers (dedicated  hardware), audio controllers (dedicated
+        hardware), and prop controllers.
+    </p>
+    <p>
+        For the PLCs,  lighting, and audio controllers. I left them out because they
+        all require  specialized knowledge and can be a conversation for another
+        blog post. They are  great for each use case but at the price of the units,
+        and the knowledge  required to run them. I left them out of this initial
+        blog. When it comes to  prop controllers, in my opinion they are overpriced
+        for something that could be  made cheaper. If you are not technically
+        inclined or just need a quick solution,  they are perfect. But at the price
+        that most companies sell them for when you  can just make your own, why not?
+    </p>
+    <p>
+        Anyways,  that is all for this blog. Work hard, stay creative, stay curious.
+    </p>
+</html>
